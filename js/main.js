@@ -4,18 +4,22 @@
 let name = prompt("Inserisci il tuo nome");
 let surname = prompt("Inserisci il tuo cognome");
 let favouriteColor = prompt("Inserisci il tuo colore preferito");
-let primoNumero = prompt("Inserisci il primo numero");
-let secondoNumero =prompt("Inserisci il secondo numero");
+let randomNumber = Math.floor(Math.random() * 10);
 
-let divisioneNumeri = primoNumero / secondoNumero; 
-let businessCard=
+//let primoNumero = prompt("Inserisci il primo numero");
+//let secondoNumero =prompt("Inserisci il secondo numero");
+//let divisioneNumeri = primoNumero / secondoNumero; 
+//divisioneNumeri = Math.trunc(divisioneNumeri);
+
+let password =
 `
-> Informazioni personali:
-Nome e Cognome: ${name}${surname}${favouriteColor}${divisioneNumeri}
+ ${name}${surname}${favouriteColor}${randomNumber}
 
 `;
 
-console.log(businessCard);
+console.log(password);
+
+document.getElementById("user_psw").innerHTML = password;
 
 
 
